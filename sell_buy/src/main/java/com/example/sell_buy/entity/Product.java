@@ -19,4 +19,10 @@ public class Product extends BaseEntity{
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Supplier> suppliers;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "order_detail_id", nullable = false)
+    private OrderDetail orderDetail;
+
+
 }

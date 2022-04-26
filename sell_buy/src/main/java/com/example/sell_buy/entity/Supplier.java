@@ -21,6 +21,6 @@ public class Supplier extends BaseEntity{
     private LocalDateTime delivaryDate;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "product", nullable = false)
+    @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 }
